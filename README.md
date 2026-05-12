@@ -59,23 +59,55 @@ python -m http.server 8005
 ## 📁 Estructura del Proyecto
 
 ```
-frontend/dashboard/
-├── index.html          # Dashboard principal
-├── debates.html        # Gestión de debates
-├── workers.html        # Gestión de workers
-├── metrics.html        # Métricas del sistema
-├── settings.html       # Configuración
-├── favicon.ico         # Icono del sistema
-└── package.json        # Configuración del proyecto
+SynapseWindsurf/
+├── backend/                    # Sistema backend completo
+│   ├── services/              # Servicios principales
+│   ├── engine/                # Motor de debates
+│   ├── models/                # Modelos de datos
+│   └── api/                   # Endpoints REST
+├── frontend/
+│   └── dashboard/             # Dashboard HTML
+│       ├── index.html         # Dashboard principal
+│       ├── debates.html       # Gestión de debates
+│       ├── workers.html       # Gestión de workers
+│       ├── metrics.html       # Métricas del sistema
+│       ├── settings.html      # Configuración
+│       ├── favicon.ico        # Icono del sistema
+│       └── package.json       # Configuración del proyecto
+├── scripts/                    # Scripts de utilidad
+│   ├── check_db.py           # Verificación de base de datos
+│   ├── test_health.py        # Test de salud del sistema
+│   ├── docker-start.sh       # Inicio Docker
+│   └── migrate_v21.py        # Migración de datos
+├── data/                       # Datos del sistema
+│   └── debates/              # Historial de debates
+├── docs/                       # Documentación
+├── docker-compose.yml          # Configuración Docker
+├── render.yaml                 # Configuración de deploy
+├── .env.example               # Variables de entorno
+└── README.md                  # Documentación completa
 ```
 
 ## 🎯 Tecnologías Utilizadas
 
+### Frontend
 - **HTML5** - Estructura semántica
 - **Tailwind CSS** - Estilos modernos
 - **JavaScript Vanilla** - Interactividad
-- **Python HTTP Server** - Desarrollo local
 - **Google Fonts** - Tipografía profesional
+
+### Backend
+- **Python 3.8+** - Lenguaje principal
+- **FastAPI** - Framework REST API
+- **SQLite** - Base de datos ligera
+- **AsyncIO** - Programación asíncrona
+- **WebSockets** - Comunicación en tiempo real
+
+### Infraestructura
+- **Docker** - Contenerización
+- **Docker Compose** - Orquestación
+- **Render** - Deploy en producción
+- **Python HTTP Server** - Desarrollo local
 
 ## 🔧 Características Técnicas
 
@@ -129,9 +161,10 @@ frontend/dashboard/
 - ✅ Optimización de layout compacto
 - ✅ Sistema de branding único
 - ✅ 5 páginas funcionales completas
-- ✅ Limpieza completa del proyecto
-- ✅ Eliminación de archivos antiguos
-- ✅ Estructura simplificada
+- ✅ Limpieza selectiva del proyecto
+- ✅ Eliminación de archivos obsoletos y tests antiguos
+- ✅ Mantenimiento del backend funcional
+- ✅ Estructura optimizada con solo archivos necesarios
 
 ## 🎯 Próximos Pasos
 
